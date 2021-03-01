@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZRE2X4NSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gTag() {
+          window.dataLayer.push(arguments);
+      }
+      gTag('js', new Date());
+      gTag('config', 'G-8ZRE2X4NSL');
+    </script>
     <meta charset="UTF-8">
 
 {% seo %}
@@ -22,20 +21,13 @@
   <body>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h1 class="project-name">Pi driveUp</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
     </header>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
-
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits"><a href="https://pages.github.com">Powered by GitHub Pages</a></span>
-      </footer>
     </main>
   </body>
 </html>
